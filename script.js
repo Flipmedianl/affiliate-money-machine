@@ -18,3 +18,5 @@ function animate(){
  const end=q('.c6'),eo=range(p,.88,.94); end.style.opacity=eo; end.style.transform='translateY(-50%) scale('+(0.9+eo*.1)+')';
  requestAnimationFrame(animate)
 } requestAnimationFrame(animate);
+// cinematic polish: pointer parallax + smooth scene depth
+let mx=0,my=0;addEventListener('pointermove',ev=>{mx=(ev.clientX/innerWidth-.5);my=(ev.clientY/innerHeight-.5);document.documentElement.style.setProperty('--mx',mx);document.documentElement.style.setProperty('--my',my)});
